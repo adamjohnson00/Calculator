@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fett" translatesAutoresizingMaskIntoConstraints="NO" id="oJn-vN-Idq">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="oJn-vN-Idq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6IJ-GI-ivl"/>
+                <constraint firstItem="oJn-vN-Idq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FbL-df-aRn"/>
+                <constraint firstAttribute="trailing" secondItem="oJn-vN-Idq" secondAttribute="trailing" id="ZN2-Ew-fa0"/>
+                <constraint firstAttribute="bottom" secondItem="oJn-vN-Idq" secondAttribute="bottom" id="i2s-Jd-Zhd"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="447" y="399"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="fett" width="750" height="1108"/>
+    </resources>
+</document>

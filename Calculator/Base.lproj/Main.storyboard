@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="RootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gold_bg" translatesAutoresizingMaskIntoConstraints="NO" id="BCl-7i-6rH">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dCq-Wm-2ml">
+                                <rect key="frame" x="239" y="125" width="123" height="29"/>
+                                <segments>
+                                    <segment title="CA"/>
+                                    <segment title="CHI"/>
+                                    <segment title="NYC"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUy-yf-CH1">
+                                <rect key="frame" x="224" y="285" width="153" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Calculate Tax">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCalculateButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="h62-Ni-Tj2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qlM-R9-kOd">
+                                <rect key="frame" x="252" y="65" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="priceTextField:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="Fw7-P1-KFT"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tax" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2V-7b-Wqw">
+                                <rect key="frame" x="224" y="183" width="153" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="QN4-rj-ah1"/>
+                                    <constraint firstAttribute="width" constant="153" id="ZsZ-CG-efm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tax Is:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNl-ZZ-V0i">
+                                <rect key="frame" x="139" y="183" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Total" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpE-2Y-GIE">
+                                <rect key="frame" x="250" y="234" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="76b-Wv-nfK"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Mqb-hX-e1Y"/>
+                                    <constraint firstAttribute="width" constant="42" id="TNT-LW-D6Q"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="42" id="ehn-g4-AyG"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="21" id="jIa-tQ-1QX"/>
+                                    <constraint firstAttribute="height" constant="21" id="pXT-Hy-L2g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t2V-7b-Wqw" firstAttribute="top" secondItem="dCq-Wm-2ml" secondAttribute="bottom" constant="30" id="2tp-Gy-i5Q"/>
+                            <constraint firstItem="dCq-Wm-2ml" firstAttribute="top" secondItem="qlM-R9-kOd" secondAttribute="bottom" constant="30" id="6v5-ur-PyI"/>
+                            <constraint firstAttribute="centerX" secondItem="YUy-yf-CH1" secondAttribute="centerX" id="B4a-ja-JWU"/>
+                            <constraint firstItem="t2V-7b-Wqw" firstAttribute="leading" secondItem="fNl-ZZ-V0i" secondAttribute="trailing" constant="30" id="Frm-fB-8W1"/>
+                            <constraint firstItem="LpE-2Y-GIE" firstAttribute="top" secondItem="t2V-7b-Wqw" secondAttribute="bottom" constant="30" id="JYV-7E-cMg"/>
+                            <constraint firstItem="YUy-yf-CH1" firstAttribute="top" secondItem="LpE-2Y-GIE" secondAttribute="bottom" constant="30" id="LYp-FI-GIf"/>
+                            <constraint firstItem="fNl-ZZ-V0i" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="158" id="XW3-c9-F55"/>
+                            <constraint firstAttribute="centerX" secondItem="LpE-2Y-GIE" secondAttribute="centerX" id="ccp-ls-uNm"/>
+                            <constraint firstItem="fNl-ZZ-V0i" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="125" id="gHC-UA-YNq"/>
+                            <constraint firstAttribute="centerX" secondItem="dCq-Wm-2ml" secondAttribute="centerX" id="jJA-WJ-dDv"/>
+                            <constraint firstItem="t2V-7b-Wqw" firstAttribute="top" secondItem="dCq-Wm-2ml" secondAttribute="bottom" constant="30" id="ktG-TJ-Iyj"/>
+                            <constraint firstAttribute="centerX" secondItem="t2V-7b-Wqw" secondAttribute="centerX" id="lxA-n0-eQH"/>
+                            <constraint firstAttribute="centerX" secondItem="qlM-R9-kOd" secondAttribute="centerX" id="mts-0g-HmP"/>
+                            <constraint firstItem="LpE-2Y-GIE" firstAttribute="top" secondItem="t2V-7b-Wqw" secondAttribute="bottom" constant="30" id="u2d-8i-Nw7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="priceTextField" destination="qlM-R9-kOd" id="6Bd-5Q-6OD"/>
+                        <outlet property="resultLabel" destination="t2V-7b-Wqw" id="0cb-SU-BVE"/>
+                        <outlet property="segmentedControl" destination="dCq-Wm-2ml" id="aTD-vC-eUl"/>
+                        <outlet property="totalLabel" destination="LpE-2Y-GIE" id="zzF-BL-CUr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gold_bg" width="160" height="284"/>
+    </resources>
+</document>
